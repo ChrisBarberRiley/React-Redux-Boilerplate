@@ -1,5 +1,6 @@
 import React, {component} from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 
 const Jsx = (props) => (
   <div>
@@ -8,4 +9,4 @@ const Jsx = (props) => (
 )
 
 
-ReactDOM.render(<Jsx />, document.getElementById('app'))
+render(<Jsx />, document.getElementById('app'))
