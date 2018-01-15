@@ -5,17 +5,21 @@ import configureStore from '../store/storeIndex'
 
 import { addTodo } from '../actions/actionsIndex'
 
-const store = configureStore();
+const store = configureStore();``
 
 store.subscribe(() => console.log(store.getState()))
 store.dispatch(addTodo({text: 'Some text in here' }))
 store.dispatch(addTodo({text: 'Other text' }))
 
+
 const Jsx = (props) => (
   <Provider store={store}>
-    <h1>Hello World</h1>
+    <h1>Hello {props.name}</h1>
   </Provider>
 )
 
+Jsx.defaultProps = {
+  name: 'Chris'
+}
 
 render(<Jsx />, document.getElementById('app'))
