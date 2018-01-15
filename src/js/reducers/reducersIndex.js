@@ -1,10 +1,10 @@
 import {
   ADD_TODO,
   visibilityFilters
-} = '../actions/actionsIndex.js'
+} from '../actions/actionsIndex.js'
 
 const defaultState = {
-  visibilityFilter = visibilityFilters.SHOW_ALL,
+  visibilityFilter: visibilityFilters.SHOW_ALL,
   todo: []
 }
 
@@ -21,4 +21,4 @@ function todoAppReducer(state = defaultState, action){
   }
 }
 
-export default todoApp;
+export default todoAppReducer;
