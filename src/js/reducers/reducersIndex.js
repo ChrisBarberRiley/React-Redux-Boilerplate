@@ -1,5 +1,6 @@
 import {
   ADD_TODO,
+  TOGGLE_TODO,
   visibilityFilters
 } from '../actions/actionsIndex.js'
 
@@ -15,6 +16,13 @@ function todoAppReducer(state = defaultState, action){
           ...state,
           action.text
         ]
+      break;
+
+    case TOGGLE_TODO:
+      console.log(action.index);
+      return state.map((state) => {
+        console.log(state);
+      })
       break;
     default:
       return state;
