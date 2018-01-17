@@ -5,7 +5,7 @@ export default () => {
   // store creation
   const store = createStore(
     combineReducers({
-      todo: todoAppReducer,
+      todos: todoAppReducer,
     })
   );
 

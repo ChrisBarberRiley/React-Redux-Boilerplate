@@ -6,7 +6,7 @@
   "author": "Chris Barber-Riley <chris@aceville.co.uk>",
   "license": "MIT",
   "scripts": {
-    "server": "webpack-dev-server --hot --inline"
+    "server": "webpack && webpack-dev-server --hot --inline"
   },
   "dependencies": {
     "babel": "^6.23.0",

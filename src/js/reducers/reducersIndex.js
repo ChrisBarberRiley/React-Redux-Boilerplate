@@ -14,14 +14,23 @@ function todoAppReducer(state = defaultState, action){
     case ADD_TODO:
         return [
           ...state,
-          action.text
+          {
+            index: action.index,
+            text: action.text,
+            visible: action.visible
+          }
         ]
       break;
 
     case TOGGLE_TODO:
-      console.log(action.index);
-      return state.map((state) => {
-        console.log(state);
+      return state.map((todo) => {
+        if(todo.index === action.index)
+          return {
+            ...todo,
+            visible: !todo.visible
+          }
+        else
+          return {...todo}
       })
       break;
     default:

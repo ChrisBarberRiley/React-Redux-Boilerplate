@@ -7,16 +7,16 @@ export const SHOW_ALL = 'SHOW_ALL'
 /*
   Action Creators
 */
-export function addTodo(index, text){
+export function addTodo({index, text}){
     return {
-      index: index, // Change this to a u_id down the line
       type: ADD_TODO,
-      visible: true,
-      text
+      index,
+      text,
+      visible: true
     }
 }
 
-export function toggleTodo({index = 0}){
+export function toggleTodo(index = 0){
   return{
     type: TOGGLE_TODO,
     index
